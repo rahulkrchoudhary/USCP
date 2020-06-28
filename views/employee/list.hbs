@@ -1,0 +1,49 @@
+<h3><a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Create New</a>   Preauth Form</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name of TPA</th>
+            <th>Toll free phone number</th>
+            <th>Toll free fax</th>
+            <th>Name of Hospital</th>
+            <th>Address of Hospital</th>
+            <th>Rohini ID</th>
+            <th>Email</th>
+            <th>First name</th>
+            <th>Middle name</th>
+            <th>Last name</th>
+            <th>Date of birth</th>
+            <th>Patient contact number</th>
+            <th>attending Relative number</th>
+            <th>Insured ID number</th>
+            <th>Policy Number</th>
+            <th>Employee ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.nameoftpa}}</td>
+            <td>{{this.tpanumber}}</td>
+            <td>{{this.tpafax}}</td>
+            <td>{{this.nameofhospital}}</td>
+            <td>{{this.addressofhospital}}</td>
+            <td>{{this.rohiniid}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.patientfirstname}}</td>
+            <td>{{this.patientmiddlename}}</td>
+            <td>{{this.patientlastname}}</td>
+            <td>{{this.dateofbirth}}</td>
+            <td>{{this.patientnumber}}</td>
+            <td>{{this.patientattendentnumber}}</td>
+            <td>{{this.insuranceid}}</td>
+            <td>{{this.policynumber}}</td>
+            <td>{{this.employeeid}}</td>
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
